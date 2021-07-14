@@ -1,12 +1,15 @@
 /* include google font  */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap');
 
+/* global used */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
+
+/*=================== header section of the document=================== */
 
 header {
     width: 100%;
@@ -16,12 +19,6 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-main {
-    display: flex;
-    justify-content: center;
-    margin-top: 70px;
 }
 
 .container {
@@ -36,8 +33,13 @@ main {
 
 .home-title {
     width: 485px;
-    height: 230px;
     padding-top: 60px;
+}
+
+.home-title .icon {
+    text-decoration: none;
+    color: tomato;
+    font-size: 30px;
 }
 
 .home-title h1 {
@@ -49,14 +51,20 @@ main {
     margin-bottom: 30px;
 }
 
-.home-title a {
+.home-title .link-btn {
     text-decoration: none;
     background: #E02C6D;
     color: #ffffff;
     padding: 10px 24px;
+    transition: 1s ease-out;
 }
 
-.sign {
+.link-btn:hover {
+    color: #2D25A0;
+    background-color: #3DBAFD;
+}
+
+.link-btn .sign {
     padding-left: 10px;
 }
 
@@ -64,32 +72,15 @@ main {
     width: 550px;
 }
 
-@media only screen and (max-width: 688px) {
-    header {
-        width: 100%;
-    }
 
-    .container {
-        width: 100%;
-    }
 
-    .home {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .home-title h1 {
-        font-size: 36px;
-        line-height: 50px;
-    }
-
-    .banner {
-        width: 329px;
-        height: 259.17px;
-    }
+/*================= players and player details=========== */
+main {
+    display: flex;
+    justify-content: center;
+    margin-top: 70px;
 }
 
-/*=========== players and player details=========== */
 .players {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -110,7 +101,7 @@ main {
 }
 
 .player-info h3 {
-    font-size: 28px;
+    font-size: 20px;
     line-height: 40px;
 }
 
@@ -120,8 +111,263 @@ main {
     line-height: 26px;
 }
 
+/*================= sponsored images styles============== */
+.sponsored-container {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+}
+
+.sponsored-container .sponsor-img {
+    width: 200px;
+}
+
+/*============ style form=================  */
+.form-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.signup-form {
+    width: 50%;
+    box-shadow: 10px 5px 30px rgba(0, 0, 0, 0.7);
+    padding: 20px;
+}
+
+form {
+    margin-top: 20px;
+
+
+}
+
+form label {
+    display: block;
+    width: 100%;
+    padding: 10px;
+}
+
+form input {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+form .btn {
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    transition: 0.5s ease-out;
+}
+
+.btn:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #ffffff;
+}
+
+/*=================== footer and logo style================ */
+
+footer {
+    width: 100%;
+    margin-top: 100px;
+    padding-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo .logo-img {
+    width: 483px;
+    height: 110px;
+}
+
+.social-media {
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-media i {
+    text-align: center;
+    padding-top: 5px;
+    margin: 5px;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #969BAB;
+}
+
+.content-info {
+    margin-top: 10px;
+    color: #111111;
+}
+
+
+
+/* media queries for mobile phone */
 @media only screen and (max-width: 688px) {
+    header {
+        width: 100%;
+        height: 695px;
+    }
+
     main {
-        display: none;
+        width: 100%;
+    }
+
+    .container {
+        width: 90%;
+    }
+
+    .home,
+    .players {
+        height: 70%;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .home-title,
+    .player {
+        width: 100%;
+    }
+
+    .icon {
+        font-size: 20px;
+    }
+
+    .home-title h1 {
+        width: 100%;
+        font-size: 36px;
+        line-height: 50px;
+        font-weight: normal;
+    }
+
+    .home-img {
+        width: 100%;
+        margin-top: 40px;
+    }
+
+    .home-img .banner {
+        width: 100%;
+        max-height: 440px;
+    }
+
+    .sponsored-container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .sponsored-container .sponsor-img {
+        width: 90px;
+    }
+
+    .signup-form {
+        width: 100%;
+
+    }
+
+
+    footer {
+        width: 100%;
+    }
+
+    .logo {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 25px;
+    }
+
+    .logo .logo-img {
+        max-width: 50%;
+        max-height: 60px;
+    }
+}
+
+/* media query for tablate */
+@media only screen and (min-width: 689px) and (max-width: 1100px) {
+    header {
+        width: 100%;
+        height: 695px;
+    }
+
+    main {
+        width: 100%;
+    }
+
+    .container {
+        width: 90%;
+    }
+
+    .home,
+    .players {
+        height: 70%;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .home-title,
+    .player {
+        width: 100%;
+    }
+
+    .home-title h1 {
+        width: 100%;
+        font-size: 36px;
+        line-height: 50px;
+        font-weight: normal;
+    }
+
+    .home-img {
+        width: 100%;
+        margin-top: 40px;
+    }
+
+    .home-img .banner {
+        width: 100%;
+        max-height: 440px;
+    }
+
+    .sponsored-container {
+        width: 100%;
+        display: flex;
+    }
+
+    .sponsored-container .sponsor-img {
+        width: 100px;
+    }
+
+    .flexible {
+        display: flex;
+        justify-content: center;
+    }
+
+    footer {
+        width: 100%;
+    }
+
+    .logo {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 25px;
+    }
+
+    .logo .logo-img {
+        max-width: 50%;
+        max-height: 60px;
     }
 }
